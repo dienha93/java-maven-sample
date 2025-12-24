@@ -7,6 +7,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
       - name: Maven Build
-        uses: dienha93/maven-actions@v1
+        uses: dienha93/maven-actions@v1.0.0
         with:
           operation: package
