@@ -1,0 +1,12 @@
+name: Maven CI/CD
+on: [push]
+jobs:
+  maven-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+      - name: Maven Build
+        uses: dienha93/maven-actions@v1
+        with:
+          operation: package
