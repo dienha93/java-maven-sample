@@ -27,7 +27,7 @@ jobs:
           env
 
       - name: Maven Build
-        uses: dienha93/maven-actions@v1.0.0
+        uses: dienha93/maven-actions@v1.1.0
         with:
           operation: ${{inputs.operation == '' && 'package' || inputs.operation }}
           java-version: ${{inputs.java-version == '' && '17' || inputs.java-version }}
