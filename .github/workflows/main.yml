@@ -1,6 +1,5 @@
 name: Maven CI/CD
 on: 
-  push:
   workflow_dispatch:
     inputs:
       operation:
@@ -16,7 +15,8 @@ on:
         required: true
         default: 'corretto'
 jobs:
-  maven-build:
+  maven:
+    name: Maven ${{inputs.operation}}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
