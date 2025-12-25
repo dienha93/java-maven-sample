@@ -7,6 +7,14 @@ on:
         description: 'Maven operation'
         required: true
         default: 'package'
+      java-version:
+        description: 'Java version'
+        required: true
+        default: '17'
+      java-distribution:
+        description: 'Java distribution'
+        required: true
+        default: 'corretto'
 jobs:
   maven-build:
     runs-on: ubuntu-latest
@@ -20,3 +28,5 @@ jobs:
         uses: dienha93/maven-actions@v1.0.0
         with:
           operation: ${{inputs.operation == '' && 'package' || inputs.operation }}
+          java-version: ${{inputs.java-version == '' && '17' || inputs.java-version }}
+          java-distribution: ${{inputs.java-distribution == '' && 'corretto' || inputs.java-distribution }}
