@@ -5,14 +5,35 @@ on:
       operation:
         description: 'Maven operation'
         required: true
+        type: choice
+        options:
+          - 'clean'
+          - 'compile'
+          - 'test'
+          - 'package'
+          - 'verify'
+          - 'install'
+          - 'site'
+          - 'deploy'
         default: 'package'
       java-version:
         description: 'Java version'
         required: true
+        type: choice
+        options:
+          - '8'
+          - '11'
+          - '17'
+          - '21'
+          - '25'
         default: '17'
       java-distribution:
         description: 'Java distribution'
         required: true
+        type: choice
+        options:
+          - 'corretto'
+          - 'temurin'
         default: 'corretto'
 jobs:
   maven:
