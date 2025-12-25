@@ -18,6 +18,8 @@ jobs:
   maven:
     name: Maven ${{inputs.operation}}
     runs-on: ubuntu-latest
+    container:
+      image: ubuntu:26.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
