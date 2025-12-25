@@ -30,3 +30,4 @@ jobs:
           operation: ${{inputs.operation == '' && 'package' || inputs.operation }}
           java-version: ${{inputs.java-version == '' && '17' || inputs.java-version }}
           java-distribution: ${{inputs.java-distribution == '' && 'corretto' || inputs.java-distribution }}
+          force-install: true
