@@ -1,5 +1,7 @@
 name: Maven CI/CD
-on: [push]
+on: 
+  push:
+  workflow_dispatch:
 jobs:
   maven-build:
     runs-on: ubuntu-latest
